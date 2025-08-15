@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paperless Website</title>
+    <link rel="stylesheet" href="style/home.css" />
+    <link rel="shortcut icon" href="assets/universal/logo.jpg" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <div class="top-nav">
+        <div class="logo">
+          <img src="assets/universal/logo.jpg" alt="Paperless Logo" />
+        </div>
+        <input type="text" placeholder="Search" />
+        <div class="auth-links">
+          <a href="#">Login</a> | <a href="#">Signup</a>
+        </div>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Summer Parties</a></li>
+          <li><a href="wedding.html">Wedding</a></li>
+          <li><a href="birthday.html">Adult Birthday</a></li>
+          <li><a href="#">Kids Birthday</a></li>
+          <li><a href="#">Baby</a></li>
+          <li><a href="#">Parties</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">Greeting Card</a></li>
+          <li><a href="#">Flyer</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">Greeting Card</a></li>
+          <li><a href="#">Flyer</a></li>
+          <li><a href="#">For Professionals</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="breadcrumb">Home / Baby / Baby shower</div>
+
+    <div class="hero-image">
+      <canvas id="canvas" width="1600" height="400"></canvas>
+    </div>
+
+    <footer>
+      <div class="footer-columns">
+        <img src="assets/universal/footer.jpg" alt="Footer Logo" />
+        <div>
+          <h4>HELP</h4>
+          <p>FAQ</p>
+          <p>Contact us</p>
+          <p>Sitemap</p>
+          <p>Return Policy</p>
+        </div>
+        <div>
+          <h4>COMPANY</h4>
+          <p>About</p>
+          <p>Pricing</p>
+          <p>Promo codes</p>
+          <p>Personal Design Services</p>
+          <p>Party Shop</p>
+          <p>Careers</p>
+        </div>
+        <div>
+          <h4>LEARN</h4>
+          <p>Blog</p>
+          <p>Online invitations</p>
+          <p>Designers collection</p>
+          <p>Product Features</p>
+          <p>Apps</p>
+        </div>
+        <div class="connect">
+          <h4>CONNECT</h4>
+          <img src="assets/universal/icons.jpg" alt="Social Icons" />
+        </div>
+      </div>
+      <p class="footer-legal">
+        <strong
+          >© 2025 Paperless Post | Terms & Privacy | Privacy Snapshot | Your
+          Privacy Choices | Accessibility Statement</strong
+        >
+      </p>
+    </footer>
+    <script src="https://unpkg.com/@rive-app/canvas@2.24.0"></script>
+    <script>
+      console.log("Welcome to the Paperless Wedding Website!");
+      // This will make a global `rive` object available, allowing you to access the Rive API via the `rive` entry point:
+      const r = new rive.Rive({
+        src: "assets/home/wedding.riv",
+        // OR the path to a discoverable and public Rive asset
+        // src: '/public/example.riv',
+        canvas: document.getElementById("canvas"),
+        autoplay: true,
+        // artboard: "Arboard", // Optional. If not supplied the default is selected
+        stateMachines: "wedding",
+        onLoad: () => {
+          r.resizeDrawingSurfaceToCanvas();
+        },
+      });
+    </script>
+  </body>
+</html>

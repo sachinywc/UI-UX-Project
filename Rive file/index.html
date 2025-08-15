@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rive Interactivity</title>
+    <style>
+        /* Reset default margin/padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #121212;
+            color:rgb(18, 8, 8);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container, .container2, .container3 {
+            max-width: 600px;
+            width: 90%;
+            padding: 20px;
+        }
+
+        canvas {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            margin: 20px 0;
+            border-radius: 10px;
+            background-color:rgb(20, 10, 10);
+        }
+
+        a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <canvas id="riveCanvas" height="500 px" width="500 px"></canvas>
+
+</div>
+<div class="container2">
+    <canvas id="riveCanvas2" height="500 px" width="500 px"></canvas>
+</div>
+
+<div class="container3">
+    <canvas id="riveCanvas3" height="500 px" width="500 px"></canvas>
+</div>
+
+<script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
+<script>
+    new rive.Rive({
+        src: "animate_spider.riv", // Make sure this file exists and is named correctly
+        canvas: document.getElementById("riveCanvas"),
+        autoplay: true,
+        // stateMachines: ["State Machine 1"], // Uncomment if needed
+    });
+
+    new rive.Rive({
+        src: "baby_shower.riv", // Make sure this file exists and is named correctly
+        canvas: document.getElementById("riveCanvas2"),
+        autoplay: true,
+        // stateMachines: ["State Machine 1"], // Uncomment if needed
+    });
+
+    new rive.Rive({
+        src: "birthday.riv", // Make sure this file exists and is named correctly
+        canvas: document.getElementById("riveCanvas3"),
+        autoplay: true,
+        // stateMachines: ["State Machine 1"], // Uncomment if needed
+    });
+</script>
+</body>
+</html>
