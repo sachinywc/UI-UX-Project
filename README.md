@@ -1,0 +1,1 @@
+The rive file contain a animation
